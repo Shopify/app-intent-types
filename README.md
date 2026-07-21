@@ -31,6 +31,7 @@ Use `application/*` intents when your app owns the data shape. Each type support
 | [`application/review`](./types/application-review.md) | Product reviews | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/review.json) |
 | [`application/shipment`](./types/application-shipment.md) | Shipment tracking | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/shipment.json) |
 | [`application/ticket`](./types/application-ticket.md) | Support tickets | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/ticket.json) |
+| [`application/translation`](./types/application-translation.md) | Merchant-facing translations 🟡 | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/translation.json) |
 
 ### `shopify/*` resource intents
 
