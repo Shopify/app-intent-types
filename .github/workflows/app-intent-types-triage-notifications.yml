@@ -24,7 +24,7 @@ env:
   # GitHub logins whose comments/reviews satisfy the 5-business-day maintainer response SLA.
   # Keep this narrower than OWNER/MEMBER/COLLABORATOR. On a public Shopify repo,
   # MEMBER can be any Shopify org member, not necessarily an app intent type maintainer.
-  MAINTAINER_LOGINS: adambarrus,vividviolet
+  MAINTAINER_LOGINS: adambarrus,vividviolet,Fionoble
 
 jobs:
   notify:
