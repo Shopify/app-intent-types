@@ -21,9 +21,10 @@ env:
   REPO: app-intent-types
   RFC_CATEGORY_SLUG: rfc
   SLA_BUSINESS_DAYS: "5"
-  # A response from one of these GitHub author associations counts as a maintainer response.
-  # This avoids hard-coding individual maintainers and works for Shopify org members/collaborators.
-  MAINTAINER_ASSOCIATIONS: OWNER,MEMBER,COLLABORATOR
+  # GitHub logins whose comments/reviews satisfy the 5-business-day maintainer response SLA.
+  # Keep this narrower than OWNER/MEMBER/COLLABORATOR. On a public Shopify repo,
+  # MEMBER can be any Shopify org member, not necessarily an app intent type maintainer.
+  MAINTAINER_LOGINS: adambarrus,vividviolet
 
 jobs:
   notify:
@@ -46,10 +47,11 @@ jobs:
             const repo = process.env.REPO;
             const rfcCategorySlug = process.env.RFC_CATEGORY_SLUG;
             const slaBusinessDays = Number(process.env.SLA_BUSINESS_DAYS || '5');
-            const maintainerAssociations = new Set(
-              (process.env.MAINTAINER_ASSOCIATIONS || 'OWNER,MEMBER,COLLABORATOR')
+            const maintainerLogins = new Set(
+              (process.env.MAINTAINER_LOGINS || '')
                 .split(',')
                 .map((value) => value.trim())
+                .map((value) => value.toLowerCase())
                 .filter(Boolean),
             );
 
@@ -99,7 +101,8 @@ jobs:
             }
 
             function isMaintainerResponse(node) {
-              return node?.authorAssociation && maintainerAssociations.has(node.authorAssociation);
+              const login = node?.author?.login?.toLowerCase();
+              return Boolean(login && maintainerLogins.has(login));
             }
 
             function hasMaintainerDiscussionResponse(discussion) {
@@ -280,5 +283,5 @@ jobs:
               `:alarm_clock: App intent type response SLA check found ${staleItems.length} item${staleItems.length === 1 ? '' : 's'} with no maintainer response after ${slaBusinessDays} business days.`,
               ...staleItems.map(formatItem),
               '',
-              `Maintainer response means a GitHub comment, PR review, or accepted discussion answer by one of: ${Array.from(maintainerAssociations).join(', ')}.`,
+              `Maintainer response means a GitHub comment, PR review, or accepted discussion answer by one of: ${Array.from(maintainerLogins).join(', ')}.`,
             ].join('\n'));
