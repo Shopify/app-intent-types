@@ -10,7 +10,7 @@ Sidekick intent type for creating or opening a **quote** — an app-owned sales 
 
 Register an `application/quote` intent when your app owns quote records that a merchant creates, sends, negotiates, and eventually converts into an order. This is the shape shared by request-a-quote (RFQ), hide-price, and B2B negotiation apps.
 
-The quote itself is yours. Shopify models the *agreed* commercial terms (companies, catalogs, payment terms) and the *conversion* (draft orders and orders), but it has no object for the negotiation in between: rounds, offers and counters, expiry, accept or decline. That gap is what this type covers.
+The quote itself is yours. Shopify's B2B objects cover the relationship and the pricing a merchant has already settled — companies, company locations and contacts, [catalogs with negotiated pricing levels](https://shopify.dev/docs/apps/build/b2b), and pre-negotiated payment terms — and [draft orders](https://shopify.dev/docs/apps/build/b2b/draft-orders) cover turning a settled deal into an invoiced order. The negotiation in between has no Shopify object: there is no `Quote` type in the Admin API, and nothing represents offer rounds, counters, expiry, or accept and decline. That gap is what this type covers.
 
 Typical examples:
 - A **B2B quote app** registering `edit` so "open quote QW-1013" takes the merchant straight to that quote.
