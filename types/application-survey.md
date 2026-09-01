@@ -1,6 +1,6 @@
 # `application/survey`
 
-Sidekick intent type for creating or editing a **survey** — a structured set of questions an app shows to shoppers (post-purchase, on the order status page, at POS, or via a link) to collect attribution, satisfaction, or research data on the merchant's behalf.
+Sidekick intent type for creating or editing a **survey** — a structured set of questions an app shows to shoppers (post-purchase, on the order status page, or at POS) to collect attribution, satisfaction, or research data on the merchant's behalf.
 
 - **Status:** 🚧 Proposed
 - **Actions:** `create`, `edit`
@@ -83,7 +83,7 @@ Three things to notice:
       "description": "Where the survey is shown.",
       "items": {
         "type": "string",
-        "enum": ["thank_you", "order_status", "pos", "link"]
+        "enum": ["thank_you", "order_status", "pos"]
       }
     },
     "questions": {
@@ -142,7 +142,7 @@ No `required` fields, per the [Sidekick schema requirements](https://shopify.dev
 | `id` | string | The survey ID. Used for `edit` actions. |
 | `name` | string | Merchant-facing survey name. |
 | `status` | string | `draft`, `active`, or `paused`. |
-| `placements` | array of string | Where it runs: `thank_you`, `order_status`, `pos`, `link`. |
+| `placements` | array of string | Where it runs: `thank_you`, `order_status`, `pos`. |
 | `questions` | array of object | Ordered questions: `prompt`, `type`, `options`, `allow_other`. |
 | `success_message` | string | Post-submission thank-you message. |
 | `starts_at` / `ends_at` | string (date-time) | Optional scheduling window. |
