@@ -42,6 +42,8 @@ Use `shopify/*` intents when your app operates on a Shopify resource identified 
 | [`shopify/customer`](./types/shopify-customer.md) | Shopify customers | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/customer/gid.json) |
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
+| [`shopify/selling-plan`](./types/shopify-selling-plan.md) | Shopify selling plans 🧪 | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/selling-plan/gid.json) |
+| [`shopify/subscription-contract`](./types/shopify-subscription-contract.md) | Shopify subscription contracts 🧪 | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/subscription-contract/gid.json) |
 
 ## How to propose a new type
 
