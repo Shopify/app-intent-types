@@ -112,7 +112,6 @@ The canonical schema intentionally captures only the plan identity today:
 
 ## Related types
 
-- **[`application/scan`](https://github.com/Shopify/app-intent-types/discussions/10)** — an audit or scan that discovers issues; an optimization plan is the reviewable set of proposed improvements.
 - **[`application/campaign`](./application-campaign.md)** — a coordinated marketing campaign with channels, audiences, or schedules; a plan can cover broader improvement work.
 - **[`application/ad`](./application-ad.md)** — a paid advertising creative; use this when the merchant is creating or editing one ad rather than a plan of improvements.
 
