@@ -107,7 +107,6 @@ The canonical schema intentionally captures only the plan identity today:
 - **Including `value` for `create`.** A new plan has no existing identity, so create omits `value`.
 - **Declaring `required` in `inputSchema`.** Sidekick collects missing fields from the merchant and rejects required fields at deploy time.
 - **Applying changes during navigation.** `create` and `edit` open the app UI; they do not apply, publish, or otherwise commit improvements without merchant review and confirmation.
-- **Using this type for an audit run.** [`application/scan`](https://github.com/Shopify/app-intent-types/discussions/10) describes an upstream scan or audit. This type describes the durable, reviewable plan produced from proposed improvements.
 - **Using a broad neighboring type.** [`application/campaign`](./application-campaign.md) is for coordinated marketing campaigns, while [`shopify/*`](../README.md#shopify-resource-intents) types operate on Shopify resources. Neither is a substitute for an app-owned optimization plan.
 
 ## Related types
