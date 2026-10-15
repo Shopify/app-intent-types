@@ -33,6 +33,7 @@ Use `application/*` intents when your app owns the data shape. Each type support
 | [`application/review`](./types/application-review.md) | Product reviews | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/review.json) |
 | [`application/shipment`](./types/application-shipment.md) | Shipment tracking | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/shipment.json) |
 | [`application/ticket`](./types/application-ticket.md) | Support tickets | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/ticket.json) |
+| [`application/visitor-restriction`](./types/application-visitor-restriction.md) | Visitor access rules | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/visitor-restriction.json) |
 
 ### `shopify/*` resource intents
 
