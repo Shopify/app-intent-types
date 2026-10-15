@@ -112,7 +112,7 @@ Only expose email matching if your app can enforce it at the intended surface. D
 ## Related types
 
 - **[`shopify/customer`](./shopify-customer.md)** imports an existing Shopify customer into an app. A visitor restriction is an app-owned rule, not a customer record.
-- **[Proposed `application/checkout-rule` RFC](../../discussions/8)** covers checkout customization rules, including payment/delivery presentation and validation. Distinguish visitor access rules from payment or delivery customization; the checkout-rule proposal isn't a supported type in this catalog.
+- **[`application/checkout-rule`](./application-checkout-rule.md)** covers checkout customization rules, including payment/delivery presentation and validation. Distinguish visitor access rules from payment or delivery customization.
 
 ## Discussion history
 
