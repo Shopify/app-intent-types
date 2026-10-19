@@ -14,10 +14,10 @@ A type-proposal PR adds **one file** under `types/`, named for the intent type. 
 
 The file should cover:
 
-- **Type and actions** — what MIME type, which supported actions you're registering for, and why. `application/*` types support `create` / `edit`; `shopify/*` resource types support `import` / `import+bulk`.
+- **Type and actions** — what MIME type, which supported actions you're registering for, and why. `application/*` types support `create` / `edit`. For `shopify/*` resource types, follow the actions listed for that type: import workflows use `import` / `import+bulk`, while resource editors use `create` and/or `edit`.
 - **When to register** — the merchant intents this type captures, with concrete examples.
 - **TOML example** — a real `shopify.extension.toml` block showing how an extension would register.
-- **Schema** — either inline JSON Schema in a fenced block or a link to a Gist / branch. `application/*` intents must `$ref` the canonical application schema URL once published. `shopify/*` intents must use the published resource GID schema for `value` and `outputSchema`. Must not declare `required` fields.
+- **Schema** — either inline JSON Schema in a fenced block or a link to a Gist / branch. `application/*` intents must `$ref` the canonical application schema URL once published. `shopify/*` intents must use the published resource GID schema for `value` and `outputSchema`. Resource `create` / `edit` intents must also reference their matching input baseline in `inputSchema.$ref`. Must not declare `required` fields.
 - **Field overview** — a short table orienting readers to the major fields.
 - **Common pitfalls** — anything that tripped you up while drafting.
 - **Related types** — pointers to existing types this could be confused with, and why yours is distinct.

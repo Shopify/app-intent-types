@@ -36,13 +36,15 @@ Use `application/*` intents when your app owns the data shape. Each type support
 
 ### `shopify/*` resource intents
 
-Use `shopify/*` intents when your app operates on a Shopify resource identified by a GID. Each type supports both `import` and `import+bulk` actions.
+Use `shopify/*` intents when your app operates on a Shopify resource identified by a GID. Supported actions depend on the type: import workflows use `import` and `import+bulk`, while resource editors use the `create` or `edit` actions listed below.
 
-| Type | Description | Actions | GID schema |
+| Type | Description | Actions | Schema |
 |---|---|---|---|
 | [`shopify/customer`](./types/shopify-customer.md) | Shopify customers | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/customer/gid.json) |
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
+| [`shopify/selling-plan-group`](./types/shopify-selling-plan-group.md) | Shopify selling plan groups | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/selling-plan-group.json) |
+| [`shopify/subscription-contract`](./types/shopify-subscription-contract.md) | Shopify subscription contracts | `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/subscription-contract.json) |
 
 ## How to propose a new type
 
