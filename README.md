@@ -36,13 +36,14 @@ Use `application/*` intents when your app owns the data shape. Each type support
 
 ### `shopify/*` resource intents
 
-Use `shopify/*` intents when your app operates on a Shopify resource identified by a GID. Each type supports both `import` and `import+bulk` actions.
+Use `shopify/*` intents when your app operates on a Shopify resource identified by a GID. Supported actions vary by type: resource import workflows use `import` and `import+bulk`, while `shopify/ProductBundle` uses `create` and `edit` for Product-backed bundle composition.
 
-| Type | Description | Actions | GID schema |
+| Type | Description | Actions | Schema reference |
 |---|---|---|---|
 | [`shopify/customer`](./types/shopify-customer.md) | Shopify customers | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/customer/gid.json) |
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
+| [`shopify/ProductBundle`](./types/shopify-productbundle.md) | Product-backed bundle composition | `create`, `edit` | [baseline](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/productbundle.json), [Product GID](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
 
 ## How to propose a new type
 
