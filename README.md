@@ -31,6 +31,7 @@ Use `application/*` intents when your app owns the data shape. Each type support
 | [`application/email`](./types/application-email.md) | Email campaigns | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/email.json) |
 | [`application/experiment`](./types/application-experiment.md) | Experiments and A/B tests | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/experiment.json) |
 | [`application/faq`](./types/application-faq.md) | FAQ management | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/faq.json) |
+| [`application/label-template`](./types/application-label-template.md) | Product, price, barcode, QR, and hangtag label designs | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/label-template.json) |
 | [`application/legal-page`](./types/application-legal-page.md) | Legal and privacy pages | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/legal-page.json) |
 | [`application/loyalty-program`](./types/application-loyalty-program.md) | Loyalty programs | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/loyalty-program.json) |
 | [`application/optimization-plan`](./types/application-optimization-plan.md) | Optimization plans | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/optimization-plan.json) |
