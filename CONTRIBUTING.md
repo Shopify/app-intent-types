@@ -17,7 +17,7 @@ Share as much of the following as you have:
 - **Type and actions** — what MIME type, which supported actions you're registering for, and why. `application/*` types support `create` / `edit`. Supported actions for `shopify/*` intents vary by type; follow the contract documented in the corresponding catalog entry.
 - **When to register** — the merchant intents this type captures, with concrete examples.
 - **TOML example** — a real `shopify.extension.toml` block showing how an extension would register.
-- **Schema sketch** — proposed fields, or a draft JSON Schema inline or linked from a Gist / branch if you have one. `application/*` intents must `$ref` the canonical application schema URL once published. `shopify/*` intents must use the published resource GID schema for `value` and `outputSchema`. `inputSchema` must not declare `required` fields.
+- **Schema sketch** — proposed fields, or a draft JSON Schema inline or linked from a Gist / branch if you have one. `application/*` intents must `$ref` the canonical application schema URL once published. `shopify/*` intents must use the published GID schema specified by the type's resource contract for `value` and `outputSchema`. For example, `shopify/content-localization` uses the Shop GID schema. `inputSchema` must not declare `required` fields.
 - **Field overview** — a short table orienting readers to the major fields.
 - **Common pitfalls** — anything that tripped you up while drafting.
 - **Related types** — pointers to existing types this could be confused with, and why yours is distinct.
