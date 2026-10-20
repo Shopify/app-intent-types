@@ -57,7 +57,8 @@ Register `create` in a separate targeting block pointing at your new-rule page, 
     "fieldName": "id"
   },
   "inputSchema": {
-    "$ref": "https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/delivery-estimate.json"
+    "$ref": "https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/delivery-estimate.json",
+    "type": "object"
   }
 }
 ```
