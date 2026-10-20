@@ -36,10 +36,11 @@ Use `application/*` intents when your app owns the data shape. Each type support
 
 ### `shopify/*` resource intents
 
-Use `shopify/*` intents when your app operates on a Shopify resource identified by a GID. Each type supports both `import` and `import+bulk` actions.
+Use `shopify/*` intents when your app operates on Shopify-owned resources. Actions depend on the type: content localization uses `edit`, while customer, order, and product import workflows use `import` and `import+bulk`. Each entry specifies its GID contract.
 
 | Type | Description | Actions | GID schema |
 |---|---|---|---|
+| [`shopify/content-localization`](./types/shopify-content-localization.md) | Localize Shopify store content | `edit` | [Shop GID](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/shop/gid.json) |
 | [`shopify/customer`](./types/shopify-customer.md) | Shopify customers | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/customer/gid.json) |
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
