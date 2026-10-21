@@ -101,7 +101,7 @@ Four things to notice:
 }
 ```
 
-`value` is the Shopify Product GID of the product whose fee setup is edited; the setup has no identity of its own. With `mapTo: "param"` and `fieldName: "id"`, `/fees/{id}` opens as `/fees/123`. `create` uses the same schema, because attaching a fee needs the product either way; if `value` is absent, the page lets the merchant pick one.
+`value` is the Shopify Product GID of the product whose fee setup is edited; the setup has no identity of its own. With `mapTo: "param"` and `fieldName: "id"`, the value travels as the `id` parameter of the target URL, so the app's page receives the product identity it needs to load the fee setup. `create` uses the same schema, because attaching a fee needs the product either way; if `value` is absent, the page lets the merchant pick one.
 
 ## Draft canonical schema
 
@@ -159,8 +159,6 @@ No `required` fields, per the [Sidekick schema requirements](https://shopify.dev
 ## Related types
 
 - **[`shopify/product`](./shopify-product.md)**: `import` creates the fee product itself, Shopify's native admin intents edit it. Neither attaches a fee to another product: apps get no `edit` on Shopify resources, and a fee setup is app-owned data on the product.
-- **`application/bundle`** *(proposed in [discussion #23](../../discussions/23))* composes products into a priced set. A fee is a charge on top of a product.
-- **`application/delivery-rule`** and **`application/checkout-rule`** *(proposed in discussions [#12](../../discussions/12) and [#8](../../discussions/8))* are targeted rules with conditions. A product fee is a charge, and its target is one product.
 
 ## Discussion history
 
