@@ -44,6 +44,14 @@ Use `shopify/*` intents when your app operates on a Shopify resource identified 
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
 
+## Proposed types
+
+The following branch draft isn't supported yet. It needs review and platform support before apps can register it.
+
+| Type | Description | Proposed actions | Schema |
+|---|---|---|---|
+| [`application/packing-slip`](./types/application-packing-slip.md) | App-owned packing slips | `create`, `edit` | [proposed schema URL](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/packing-slip.json) |
+
 ## How to propose a new type
 
 There are two paths, depending on how settled your idea is.
