@@ -46,6 +46,7 @@ Use `shopify/*` intents when your app operates on Shopify-owned resources. Suppo
 | Type | Description | Actions | Schema reference |
 |---|---|---|---|
 | [`shopify/customer`](./types/shopify-customer.md) | Shopify customers | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/customer/gid.json) |
+| [`shopify/InventoryTransfer`](./types/shopify-inventorytransfer.md) | Shopify inventory transfers between locations | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/inventorytransfer/gid.json) |
 | [`shopify/OnlineStoreTheme`](./types/shopify-onlinestoretheme.md) | Online store themes | `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/onlinestoretheme/gid.json) |
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
