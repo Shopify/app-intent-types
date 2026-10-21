@@ -44,6 +44,12 @@ Use `shopify/*` intents when your app operates on a Shopify resource identified 
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
 
+### Proposed types (not yet supported)
+
+| Type | Description | Proposed actions | Schema |
+|---|---|---|---|
+| [`application/cart-promotion`](./types/application-cart-promotion.md) | App-owned conditional cart rewards, distinct from Shopify discounts | `create`, `edit` | Pending publication |
+
 ## How to propose a new type
 
 There are two paths, depending on how settled your idea is.
