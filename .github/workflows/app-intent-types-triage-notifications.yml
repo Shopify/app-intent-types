@@ -185,6 +185,8 @@ jobs:
                           title
                           url
                           createdAt
+                          closed
+                          isAnswered
                           answerChosenAt
                           author { login }
                           comments(first: 100) {
@@ -201,6 +203,9 @@ jobs:
                 `, {owner, repo, categoryId: rfcCategoryId});
 
                 for (const discussion of discussionData.repository.discussions.nodes) {
+                  // Closed or answered RFCs no longer need a triage response.
+                  if (discussion.closed || discussion.isAnswered) continue;
+
                   const businessDaysOld = businessDaysBetween(discussion.createdAt);
                   if (businessDaysOld >= slaBusinessDays && !hasMaintainerDiscussionResponse(discussion)) {
                     staleItems.push({
