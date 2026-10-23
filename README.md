@@ -26,6 +26,7 @@ Use `application/*` intents when your app owns the data shape. Each type support
 | [`application/campaign`](./types/application-campaign.md) | Marketing campaigns | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/campaign.json) |
 | [`application/email`](./types/application-email.md) | Email campaigns | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/email.json) |
 | [`application/faq`](./types/application-faq.md) | FAQ management | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/faq.json) |
+| [`application/legal-page`](./types/application-legal-page.md) | Legal and privacy pages | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/legal-page.json) |
 | [`application/loyalty-program`](./types/application-loyalty-program.md) | Loyalty programs | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/loyalty-program.json) |
 | [`application/optimization-plan`](./types/application-optimization-plan.md) | Optimization plans | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/optimization-plan.json) |
 | [`application/quote`](./types/application-quote.md) | Sales quotes & negotiation | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/quote.json) |
