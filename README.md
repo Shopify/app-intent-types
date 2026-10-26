@@ -23,6 +23,7 @@ Use `application/*` intents when your app owns the data shape. Each type support
 | Type | Description | Actions | Schema |
 |---|---|---|---|
 | [`application/ad`](./types/application-ad.md) | Ad campaigns | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/ad.json) |
+| [`application/calendar-event`](./types/application-calendar-event.md) | App-owned store calendar events | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/calendar-event.json) |
 | [`application/campaign`](./types/application-campaign.md) | Marketing campaigns | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/campaign.json) |
 | [`application/email`](./types/application-email.md) | Email campaigns | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/email.json) |
 | [`application/experiment`](./types/application-experiment.md) | Experiments and A/B tests | `create`, `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/experiment.json) |
