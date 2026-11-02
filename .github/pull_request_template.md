@@ -1,10 +1,14 @@
 <!--
-Thanks for proposing a Sidekick intent type. Fill out as much as you can —
-sections you can't answer yet are fine, just say so.
-
-If this is an early-stage idea, consider opening an RFC discussion first:
+Partners: please contribute through an RFC discussion, not a pull request:
 https://github.com/Shopify/app-intent-types/discussions/categories/rfc
+
+Shopify's internal team uses this template to formalize requests from discussions.
+Link the original discussion below.
 -->
+
+## Source discussion
+
+Link to the RFC discussion this PR formalizes:
 
 ## Proposed type
 
