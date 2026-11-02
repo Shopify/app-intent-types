@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Propose a new intent type
     url: https://github.com/Shopify/app-intent-types/discussions/new?category=rfc
-    about: Open an RFC discussion to sketch a new type. Once shaped, follow up with a PR adding a file under types/.
+    about: Propose a new type or a change to an existing type in an RFC discussion. Shopify's internal team will formalize accepted proposals into PRs.
   - name: Ask for help with intent registration
     url: https://github.com/Shopify/app-intent-types/discussions/categories/help
     about: Stuck on shopify.extension.toml or your inputSchema? Ask in Discussions.

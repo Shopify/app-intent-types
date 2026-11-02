@@ -9,8 +9,8 @@ If you're building a Shopify app and the type you need to register an intent for
 ## What's here
 
 - **[`types/`](./types/)** — every intent type Shopify currently supports, one file per type, with the JSON Schema URL, supported actions, and example use cases.
-- **[Discussions](../../discussions)** — open conversations about intent design, early-stage proposals, and questions. Use this before a formal PR.
-- **Pull requests** — formal proposals for new types, additions to existing types, and refinements. See [How to propose a new type](#how-to-propose-a-new-type) below.
+- **[Discussions](../../discussions)** — where partners propose new types, request additions to existing types, suggest refinements, and ask questions. See [How to propose a new type](#how-to-propose-a-new-type) below.
+- **Pull requests** — opened by Shopify's internal team to formalize requests from discussions and update the catalog.
 
 ## Currently supported types
 
@@ -50,11 +50,9 @@ Use `shopify/*` intents when your app operates on a Shopify resource identified 
 
 ## How to propose a new type
 
-There are two paths, depending on how settled your idea is.
+**Open an [RFC discussion](../../discussions/categories/rfc), not a pull request.** This is the contribution path for partners, whether you're sharing an early idea or a fully shaped proposal. Shopify's internal team is responsible for formalizing requests into PRs.
 
-### Path 1 — Start with a Discussion (recommended for new ideas)
-
-If you're not sure the type makes sense, what shape it should be, or whether something close to it already exists, **open an [RFC discussion](../../discussions/categories/rfc)** first. We'd rather sketch with you in a thread than have you spend hours on a PR that needs to start over.
+Before starting a new discussion, check the existing types and discussions to see whether your use case is already covered. If a discussion covers your request, upvote it and add your use case instead of opening a duplicate. Upvotes and concrete use cases help our team gauge demand and prioritize requests.
 
 A good RFC discussion answers:
 1. **What type are you proposing?** (e.g. `application/invoice`)
@@ -63,17 +61,13 @@ A good RFC discussion answers:
 4. **What fields does it need?** A sketch of the schema is enough — full JSON Schema can come later.
 5. **Anything close in the existing list?** If `application/ticket` covers most of what `application/invoice` would, say so.
 
-### Path 2 — Open a Pull Request
+If you already have a draft JSON Schema, include it in the discussion or link to it. It should conform to the [Sidekick schema requirements](https://shopify.dev/docs/apps/build/sidekick/build-app-actions). Critically, **`inputSchema` must not declare `required` fields** — Sidekick fills missing fields via UI before invoking your extension. A complete schema isn't required to start the conversation.
 
-Once the shape is settled (either through discussion or because the type is obvious), open a PR adding a file under `types/`. Use [`types/application-email.md`](./types/application-email.md) as the template.
+Keep schemas minimal: every field becomes part of the platform-wide contract for that MIME type, so focus on broadly useful fields rather than app-specific details.
 
-A type proposal PR should include:
+### What happens next
 
-- A new file under `types/` describing the type, actions, schema, and example use cases. Use `application-{name}.md` for app-owned shapes and `shopify-{resource}.md` for Shopify resource intents.
-- A draft JSON Schema (inline in the PR or linked from a Gist) that conforms to the [Sidekick schema requirements](https://shopify.dev/docs/apps/build/sidekick/build-app-actions). Critically, **`inputSchema` must not declare `required` fields** — Sidekick fills missing fields via UI before invoking your extension.
-- A short rationale: who's asking for this, what problem it unblocks, and any prior art.
-
-We'll review and either merge, request changes, or move it back to a discussion if more shaping is needed.
+We'll review the request and work with you in the discussion to refine it. For accepted proposals, Shopify's internal team opens the PR to add or update the files under `types/`, linking back to the discussion. Partners don't need to prepare or submit a PR.
 
 ## What we're looking for
 
@@ -95,9 +89,9 @@ We'll review and either merge, request changes, or move it back to a discussion 
 
 ## Review process
 
-- A Shopify maintainer responds to discussions and PRs within **5 business days**.
-- For PRs, expect at least one round of schema review before merge.
-- Merging this repo doesn't automatically ship the type — Shopify still has to publish the schema to `extensions.shopifycdn.com` and roll it out to Sidekick. We'll comment on the PR with the rollout timeline.
+- A Shopify maintainer responds to discussions within **5 business days**.
+- Expect at least one round of schema review as we work through the proposal in the discussion.
+- Merging a PR doesn't automatically ship the type — Shopify still has to publish the schema to `extensions.shopifycdn.com` and roll it out to Sidekick. We'll share the rollout timeline in the discussion.
 
 ## Code of Conduct
 
