@@ -14,7 +14,7 @@ Describe the request and the merchant use cases it would support. A field sketch
 
 Share as much of the following as you have:
 
-- **Type and actions** — what MIME type, which supported actions you're registering for, and why. `application/*` types support `create` / `edit`; `shopify/*` resource types support `import` / `import+bulk`.
+- **Type and actions** — what MIME type, which supported actions you're registering for, and why. `application/*` types support `create` / `edit`. Supported actions for `shopify/*` intents vary by type; follow the contract documented in the corresponding catalog entry.
 - **When to register** — the merchant intents this type captures, with concrete examples.
 - **TOML example** — a real `shopify.extension.toml` block showing how an extension would register.
 - **Schema sketch** — proposed fields, or a draft JSON Schema inline or linked from a Gist / branch if you have one. `application/*` intents must `$ref` the canonical application schema URL once published. `shopify/*` intents must use the published resource GID schema for `value` and `outputSchema`. `inputSchema` must not declare `required` fields.
