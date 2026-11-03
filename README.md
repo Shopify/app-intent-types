@@ -43,12 +43,13 @@ Use `application/*` intents when your app owns the data shape. Each type support
 
 Use `shopify/*` intents when your app operates on Shopify-owned resources. Supported actions and GID contracts vary by type; use the actions and schema references listed in each entry.
 
-| Type | Description | Actions | GID schema |
+| Type | Description | Actions | Schema reference |
 |---|---|---|---|
 | [`shopify/customer`](./types/shopify-customer.md) | Shopify customers | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/customer/gid.json) |
 | [`shopify/OnlineStoreTheme`](./types/shopify-onlinestoretheme.md) | Online store themes | `edit` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/onlinestoretheme/gid.json) |
 | [`shopify/order`](./types/shopify-order.md) | Shopify orders | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/order/gid.json) |
 | [`shopify/product`](./types/shopify-product.md) | Shopify products | `import`, `import+bulk` | [schema](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
+| [`shopify/ProductBundle`](./types/shopify-productbundle.md) | Product-backed bundle composition | `create`, `edit` | [baseline](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/productbundle.json), [Product GID](https://extensions.shopifycdn.com/shopifycloud/schemas/v1/shopify/product/gid.json) |
 
 ## How to propose a new type
 
