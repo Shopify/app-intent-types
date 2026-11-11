@@ -22,7 +22,7 @@ Typical examples:
 In your extension's `shopify.extension.toml`:
 
 ```toml
-api_version = "2025-04"
+api_version = "2026-04"
 
 [[extensions]]
 name = "manage-survey"
@@ -31,7 +31,7 @@ type = "ui_extension"
 
   [[extensions.targeting]]
   module = "./src/ManageSurvey.tsx"
-  target = "admin.intent.render"
+  target = "admin.app.intent.render"
 
   [[extensions.targeting.intents]]
   type = "application/survey"
@@ -51,8 +51,11 @@ Three things to notice:
 
 ```json
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/survey.json"
+  "$schema": "https://extensions.shopifycdn.com/shopifycloud/schemas/v1/intent.json",
+  "value": { "type": "string", "description": "The survey identifier for an edit." },
+  "inputSchema": {
+    "$ref": "https://extensions.shopifycdn.com/shopifycloud/schemas/v1/application/survey.json"
+  }
 }
 ```
 
