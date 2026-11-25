@@ -8,14 +8,16 @@ Sidekick intent type for creating or editing an **optimization plan** — an app
 
 ## When to register an intent for this type
 
-Register an `application/optimization-plan` intent when your app owns a durable plan of proposed improvements across areas such as SEO, accessibility, conversion, or merchandising.
+Register an `application/optimization-plan` intent when your app owns a durable plan of proposed improvements across areas such as SEO, accessibility, conversion, merchandising, or customer data quality.
+
+The plan can be the result of a check your app runs over store data. A request to find, check, or audit something ("find my duplicate customers", "check my store for broken links", "audit my product images for missing alt text") is a `create` request when the check produces a plan of proposed improvements that the merchant reviews before anything is applied. A check that only reports findings, with nothing to apply, isn't an optimization plan. Neither are other kinds of plan, such as subscription or selling plans.
 
 Typical examples:
 
 - An optimization app registering `create` so Sidekick can open a new plan builder with suggestions from the merchant's request.
 - An optimization app registering `edit` so Sidekick can open an existing plan for review and refinement.
 
-The intent opens your app's UI. It does not apply or publish improvements by itself; use tools in the opened page for review, confirmation, and any subsequent changes.
+The intent opens your app's UI. It does not apply or publish improvements by itself; use tools in the opened page for review, confirmation, and any subsequent changes. A `create` intent can start the check that builds the plan, as long as applying its improvements still waits for merchant review.
 
 ## Example: register the intent
 
@@ -117,3 +119,4 @@ The canonical schema intentionally captures only the plan identity today:
 ## Discussion history
 
 - Original proposal: [#15 — Optimization plan intent type](https://github.com/Shopify/app-intent-types/discussions/15)
+- [#10 — application/scan](https://github.com/Shopify/app-intent-types/discussions/10) proposed a separate type for scans and audits. Checks that produce a plan of proposed improvements use this type instead.
